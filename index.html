@@ -33,8 +33,9 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-                <section class="tightPacked">
-                    <h1><span class='tart'>tart</span><span class='js'>JS</span></h1>
+
+                <section class="tightPacked" data-state="pastelRed">
+                    <h1 class='cream'><span class='tart'>tart</span><span class='js'>JS</span></h1>
                     <h2>ile</h2>
                     <h2>Büyük Ölçekli Uygulama Geliştirme</h2>
                     <br/>
@@ -48,8 +49,10 @@
                         if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
                     </script>
                 </section>
-
-                <section class="trailOff">
+                <section>
+                    <img src='img/JSpict01.png'/>
+                </section>
+                <section class="trailOff" data-state="softBlue">
                     <h2>Ben Kimim?</h2>
                     <p>Tart Yeni Medya Mutfağı'nda baş yazılım mimarıyım.</p>
                     <p>tuttur.com, playstore.com gibi tart projelerinin genel yazılım mimarilerinden sorumluyum.</p>
@@ -60,7 +63,7 @@
                     <p>Çeşitli JavaScript kütüphaneleri yazarım.</p>
                     <p>JavaScript konusunda ahkam keserim.</p>
                 </section>
-                <section class="tightPacked">
+                <section class="tightPacked" data-state="pastelBlue">
                     <section>
                         <h1>tart</h1>
                     </section>
@@ -90,6 +93,9 @@
                         <li><b>mira</b> - <i>Qt ile komut satırından çalışan "headless" tarayıcı</i></li>
                         <li><b>DirectServer</b> - <i>Dağıtık kilit sunucusu</i></li>
                     </ul>
+                    <br/>
+                    <br/>
+                    <a href="http://github.com/tart">github.com/tart/tartJS</a>
                 </section>
 
                 <section>
@@ -105,13 +111,13 @@
                     </section>
                     <section>
                         <h2>Click event'ini dinlemek</h2>
-                        <pre><code>
+                        <pre><code contenteditable>
 goog.events.listen(domElement, goog.events.EventType.CLICK, function(e) {
     console.log("Merhaba dünya!");
 }, false, this);
                         </code></pre>
                         <h2 class="topMargin">Map / Reduce</h2>
-                        <pre><code>
+                        <pre><code contenteditable>
 var mapped = goog.array.map([1, 2, 3], function(value) {
     return value * 2;
 });
@@ -123,7 +129,7 @@ var reduced = goog.array.reduce(mapped, function(currentValue, value) {
                     </section>
                     <section>
                         <h2>Modüller ve nesne yönelimli programlama</h2>
-<pre><code>
+<pre><code contenteditable>
 goog.provide('tart.MasterChef');
 goog.require('tart.Chef');
 
@@ -153,7 +159,7 @@ tart.MasterChef.prototype.greet = function() {
                     </section>
                     <section>
                         <h2>Uydurma syntax</h2>
-<pre><code>
+<pre><code contenteditable>
 $.Class('Monster',
 /* @static */
 {
@@ -186,22 +192,22 @@ $.Class('Monster',
                     <section>
                         <h2>tartMVC</h2>
                         <blockquote>MVC bir kod organizasyon şemasıdır, uygulama çatısı değildir.</blockquote>
-                        <p class="fragment">playstore.com için geliştirildi, tüm dünyayla paylaşıldı</p>
-                        <p class="fragment">GCC ile advanced mode'da derlenebilen, production'daki tek MVC çatısı</p>
-                        <p class="fragment">Hafif. gzip'li ve derlenmiş hali <b>10,5kb</b></p>
-                        <p class="fragment">Closure'nin çoğu temel öğesini içerir</p>
+                        <p>playstore.com için geliştirildi, tüm dünyayla paylaşıldı</p>
+                        <p>GCC ile advanced mode'da derlenebilen, production'daki tek MVC çatısı</p>
+                        <p>Hafif. gzip'li ve derlenmiş hali <b>10,5kb</b></p>
+                        <p>Closure'nin çoğu temel öğesini içerir</p>
                     </section>
                     <section>
                         <h2>Neden tartMVC?</h2>
-                        <p class="fragment">Hızlı, ufak, performanslı</p>
-                        <p class="fragment">Ruby on Rails ya da Zend gibi klasik bir web mvc çatısı</p>
-                        <p class="fragment">Sizi belli bir tarzda kod yazmaya zorlamaz</p>
-                        <p class="fragment">Uydurma syntax'ları yoktur, JavaScript'in saf OOP syntax'ını kullanır</p>
-                        <p class="fragment">Nesne yönelimli, type safe, bol dokümentasyonlu kod yazmanızı sağlar</p>
+                        <p>Hızlı, ufak, performanslı</p>
+                        <p>Ruby on Rails ya da Zend gibi klasik bir web mvc çatısı</p>
+                        <p>Sizi belli bir tarzda kod yazmaya zorlamaz</p>
+                        <p>Uydurma syntax'ları yoktur, JavaScript'in saf OOP syntax'ını kullanır</p>
+                        <p>Nesne yönelimli, type safe, bol dokümentasyonlu kod yazmanızı sağlar</p>
                     </section>
                     <section>
                         <h2>tartMVC neye benzer?</h2>
-<pre><code>/**
+<pre><code contenteditable>/**
  * @constructor
  * @extends {tart.mvc.Controller}
  */
@@ -228,6 +234,7 @@ mvcapp.controllers.GamesController.indexAction = function() {
 </code></pre>
                     </section>
                 </section>
+
                 <section>
                     <section>
                         <h2>tartJS component kütüphaneleri</h2>
@@ -241,7 +248,7 @@ mvcapp.controllers.GamesController.indexAction = function() {
                         <p>Modülarite</p>
                         <p>Prototipleme için değil, üretim ortamları içindir.</p>
                     </section>
-                    <section>
+                    <section data-state="grey">
                         <h2>tart.components</h2>
                         <p>Büyük ölçekli / geniş sorumluluklu interaktif widget'lar için <br> klasik MVC şeması sunar</p>
                         <p>Widget, Model, Controller, View ve Template sınıflarından oluşur</p>
@@ -254,7 +261,7 @@ mvcapp.controllers.GamesController.indexAction = function() {
                         <p>Imperative syntax sayesinde her DOM elemanı üzerinde azami kontrol sağlar</p>
                     </section>
                     <section>
-                        <h2>tart.ui.Element</h2>
+                        <h2>tart.ui.DlgComponent</h2>
                         <p>tart.uı.Component'in bir varyasyonudur</p>
                         <p>Çok daha hızlı development sağlar</p>
                         <p>Performansı artırmak için sadece belirli DOM elemanları üzerinde kontrol imkanı sunar</p>
@@ -263,18 +270,18 @@ mvcapp.controllers.GamesController.indexAction = function() {
                         <p>jQuery'den >5, Angular.js'ten >10 kat daha performanslı çalışır</p>
                     </section>
                 </section>
-                <section>
+                <section data-state="pastelPurple">
                     <h2>tartJS Boilerplate</h2>
                     <p>tartJS ile nesne yönelimli JavaScript geliştirmeye başlayın.</p>
                     <br>
-                    <p>github.com/tart/tartJS-Boilerplate</p>
+                    <p>github.com/tart/Boilerplate</p>
                     <br>
                     <p><b>İçindekiler</b></p>
                     <p><i>tartJS</i></p>
                     <p><i>Temel klasör yapısı</i></p>
                     <p><i>Build script'leri</i></p>
                 </section>
-                <section>
+                <section data-state="brown">
                     <br/>
                     <br/>
                     <br/>
@@ -282,7 +289,7 @@ mvcapp.controllers.GamesController.indexAction = function() {
                     <br/>
                     <h1>?</h1>
                 </section>
-                <section>
+                <section data-state="brightBlue">
                     <h2>GitHub'da katkılarınızı bekliyoruz.</h2>
                     <br/>
                     <h1>Teşekkürler!</h1>

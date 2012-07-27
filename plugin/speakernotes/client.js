@@ -32,4 +32,8 @@
 
 		socket.emit('slidechanged', slideData);
 	} );
+
+    socket.on('key', function() {
+        Reveal.navigateNext();
+    })
 }());

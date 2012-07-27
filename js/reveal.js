@@ -6,7 +6,6 @@
  * Copyright (C) 2012 Hakim El Hattab, http://hakim.se
  */
 var Reveal = (function(){
-	
 	var HORIZONTAL_SLIDES_SELECTOR = '.reveal .slides>section',
 		VERTICAL_SLIDES_SELECTOR = '.reveal .slides>section.present>section',
 
