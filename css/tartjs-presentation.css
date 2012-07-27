@@ -1,0 +1,45 @@
+.trailOff > p + p + p {
+	font-size: 24px;
+}
+
+.trailOff > p + p + p + p {
+	font-size: 20px;
+}
+
+.trailOff > p + p + p + p  + p {
+	font-size: 16px;
+}
+
+.trailOff > p + p + p + p  + p + p {
+	font-size: 12px;
+}
+
+.trailOff > p + p + p + p  + p + p + p {
+	font-size: 10px;
+}
+
+.trailOff > p + p + p + p  + p + p + p + p {
+	font-size: 8px;
+}
+
+.theme-tart .tightPacked * {
+	margin: 0 0 20px 0;
+}
+
+.theme-tart body {
+/*	font-family: 'Overlock', cursive; */
+}
+
+.theme-tart body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 900 !important
+}
+
+.theme-tart .topMargin {
+	margin-top: 60px;
+}
+
+li {
+	text-align: center;
+	list-style: none;
+}
