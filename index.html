@@ -1,309 +1,359 @@
-<!doctype html>  
+<!doctype html>
 <html lang="en">
-	
-	<head>
-		<meta charset="utf-8">
-		
-		<title>reveal.js - HTML5 Presentations</title>
 
-		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
-		<meta name="author" content="Hakim El Hattab">
+    <head>
+        <meta charset="utf-8">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-		
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/tart.css">
-		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+        <title>tartJS ile Büyük Ölçekli Uygulama Geliştirme</title>
 
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-	</head>
-	
-	<body>
-		
-		<div class="reveal">
+        <meta name="description" content="sdf">
+        <meta name="author" content="Armağan Amcalar">
 
-			<!-- Used to fade in a background when a specific slide state is reached -->
-			<div class="state-background"></div>
-			
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3 class="inverted">CSS 3D Presentations</h3>
-					<script>
-						// Delicously hacky. Look away.
-						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
-					</script>
-				</section>
-				
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is an easy to use, HTML based, presentation tool. You'll need a modern browser with 
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-					</p>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
-				</section>
-				
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,<br/>
-							try pressing <a href="#/2/1">down</a>.
-						</p>
-						<a href="#/2/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Overlock:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/tart.css">
+        <link rel="stylesheet" href="css/tartjs-presentation.css">
+        <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 
-				<section>
-					<h2>Holistic Overview</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview!
-					</p>
-				</section>
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+    </head>
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides pinch your way to the overview.
-					</p>
-				</section>
+    <body>
 
-				<section>
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like:
-					</p>
-					<ul>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=linear">Linear</a></li>
-					</ul>
-				</section>
+        <div class="reveal">
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-				
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+            <!-- Used to fade in a background when a specific slide state is reached -->
+            <div class="state-background"></div>
 
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This let's you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#/7/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#/7/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#/7/0" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section class="tightPacked">
+                    <h1><span class='tart'>tart</span><span class='js'>JS</span></h1>
+                    <h2>ile</h2>
+                    <h2>Büyük Ölçekli Uygulama Geliştirme</h2>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h3>Armağan Amcalar</h3>
+                    <h3>Chief Architect, Tart New Media</h3>
+                    <script>
+                        // Delicously hacky. Look away.
+                        if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+                    </script>
+                </section>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+                <section class="trailOff">
+                    <h2>Ben Kimim?</h2>
+                    <p>Tart Yeni Medya Mutfağı'nda baş yazılım mimarıyım.</p>
+                    <p>tuttur.com, playstore.com gibi tart projelerinin genel yazılım mimarilerinden sorumluyum.</p>
+                    <p>Açık kaynaklı projelere katkıda bulunurum.</p>
+                    <p>Açık kaynaklı projeler geliştiririm.</p>
+                    <p>Yaz kampında adam yetiştiririm.</p>                    
+                    <p>ARGE faaliyetlerini planlar ve yürütürüm.</p>
+                    <p>Çeşitli JavaScript kütüphaneleri yazarım.</p>
+                    <p>JavaScript konusunda ahkam keserim.</p>
+                </section>
+                <section class="tightPacked">
+                    <section>
+                        <h1>tart</h1>
+                    </section>
+                    <section>
+                        <h1>tart</h1>
+                        <h1>&#9825</h1>
+                        <h1>açık kaynak</h1>
+                    </section>
+                    <section>
+                        <h1>tart</h1>
+                        <h1>&#9825</h1>
+                        <h1>açık kaynak</h1>
+                        <br/>
+                        <h2>ve</h2> 
+                        <h2>GitHub</h2>
+                    </section>
+                </section>
+                <section>
+                    <h2>Bazı açık kaynaklı projelerimiz</h2>
+                    <ul>
+                        <li><b>tartJS</b> - <i>Google Closure Library üzerine kurulu JS framework'ü</i></li>
+                        <li><b>tartMVC</b> - <i>Closure ile web mvc framework'ü</i></li>
+                        <li><b>tart components</b> - <i>Closure ile tekrar kullanılabilir komponentler</i></li>
+                        <li><b>geneJS</b> - <i>PlantUML için kod jeneratörü</i></li>
+                        <li><b>MoTop</b> - <i>MongoDB için "top" klonu</i></li>
+                        <li><b>qasmine</b> - <i>Jasmine testlerini komut satırından çalıştırmak için Qt uygulaması</i></li>
+                        <li><b>mira</b> - <i>Qt ile komut satırından çalışan "headless" tarayıcı</i></li>
+                        <li><b>DirectServer</b> - <i>Dağıtık kilit sunucusu</i></li>
+                    </ul>
+                </section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-				
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-    
-    var nodes = document.querySelectorAll( selector );
+                <section>
+                    <section>
+                        <h2>Google Closure Library ve Tools</h2>
+                        <p>Google'ın bütün ürünlerinde kullanılır</p>
+                        <p>En iyi JavaScript performansını sunar</p>
+                        <p>Modülerdir, nesne yönelimli programlamayı taban alır</p>
+                        <p>JavaScript kodunu derler, type safety sağlar</p>
+                        <p>Kod tarzını kontrol ve dikte eder</p>
+                        <p>Sayısız yararlı kütüphane, fonksiyon ve komponent içerir</p>
+                        <p><b>Constructor function ve prototype tabanlı programlama ile doğal JavaScript syntax'ını kullanır</b></p>
+                    </section>
+                    <section>
+                        <h2>Click event'ini dinlemek</h2>
+                        <pre><code>
+goog.events.listen(domElement, goog.events.EventType.CLICK, function(e) {
+    console.log("Merhaba dünya!");
+}, false, this);
+                        </code></pre>
+                        <h2 class="topMargin">Map / Reduce</h2>
+                        <pre><code>
+var mapped = goog.array.map([1, 2, 3], function(value) {
+    return value * 2;
+});
 
-    for( var i = 0, len = nodes.length; i < len; i++ ) {
-      var node = nodes[i];
+var reduced = goog.array.reduce(mapped, function(currentValue, value) {
+    return currentValue + value;
+}, 0);
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Modüller ve nesne yönelimli programlama</h2>
+<pre><code>
+goog.provide('tart.MasterChef');
+goog.require('tart.Chef');
 
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
+/**
+ * Master şef sınıfı tart'ın usta aşçılarının yaratıldığı sınıftır.
+ * Onlar ki şüphesiz tart'ın en leziz yemeklerini yaparlar.
+ *
+ * @constructor
+ * @extends {tart.Chef}
+ * @param {string} name Şefin adı.
+ * @param {string} profession Şefin ustalık alanı.
+ */
+tart.MasterChef = function(name, profession) {
+    goog.base(this, name);
+    this.profession = profession;
+};
+goog.inherits(tart.MasterChef, tart.Chef);
+
+tart.MasterChef.prototype.greet = function() {
+    var name = goog.base(this, 'greet');
+
+    return 'Merhaba ben ' + name + ', ' + 
+        this.profession + ' konusunda uzmanım.';
+};
+
+</code></pre>
+                    </section>
+                    <section>
+                        <h2>Uydurma syntax</h2>
+<pre><code>
+$.Class('Monster',
+/* @static */
+{
+  count: 0
+},
+/* @prototype */
+{
+  init: function( name ) {
+
+    // saves name on the monster instance
+    this.name = name;
+
+    // sets the health
+    this.health = 10;
+
+    // increments count
+    this.constructor.count++;
+  },
+  eat: function( smallChildren ){
+    this.health += smallChildren;
+  },
+  fight: function() {
+    this.health -= 2;
   }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-				
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,<br/>
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+});
+</code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>tartMVC</h2>
+                        <blockquote>MVC bir kod organizasyon şemasıdır, uygulama çatısı değildir.</blockquote>
+                        <p class="fragment">playstore.com için geliştirildi, tüm dünyayla paylaşıldı</p>
+                        <p class="fragment">GCC ile advanced mode'da derlenebilen, production'daki tek MVC çatısı</p>
+                        <p class="fragment">Hafif. gzip'li ve derlenmiş hali <b>10,5kb</b></p>
+                        <p class="fragment">Closure'nin çoğu temel öğesini içerir</p>
+                    </section>
+                    <section>
+                        <h2>Neden tartMVC?</h2>
+                        <p class="fragment">Hızlı, ufak, performanslı</p>
+                        <p class="fragment">Ruby on Rails ya da Zend gibi klasik bir web mvc çatısı</p>
+                        <p class="fragment">Sizi belli bir tarzda kod yazmaya zorlamaz</p>
+                        <p class="fragment">Uydurma syntax'ları yoktur, JavaScript'in saf OOP syntax'ını kullanır</p>
+                        <p class="fragment">Nesne yönelimli, type safe, bol dokümentasyonlu kod yazmanızı sağlar</p>
+                    </section>
+                    <section>
+                        <h2>tartMVC neye benzer?</h2>
+<pre><code>/**
+ * @constructor
+ * @extends {tart.mvc.Controller}
+ */
+mvcapp.controllers.GamesController = function() {
+    goog.base(this);
+};
+goog.inherits(mvcapp.controllers.GamesController, tart.mvc.Controller);
 
-				<section>
-					<h2>Fragmented Views</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<ol>
-						<li class="fragment"><code>any type</code></li>
-						<li class="fragment"><em>of view</em></li>
-						<li class="fragment"><strong>fragments</strong></li>
-					</ol>
-				</section>
-				
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
-					</a>
-				</section>
-				
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-				
-				<section>
-					<h1>THE END</h1>
-					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
-				</section>
-			</div>
+/**
+ * @this {tart.mvc.Action}
+ * @return {tart.mvc.uri.Redirection} Redirects to 'home anything' route.
+ */
+mvcapp.controllers.GamesController.indexAction = function() {
+    this.setViewScript(mvcapp.views.scripts.games.index);
+    this.setLayout(mvcapp.views.layouts.rare);
 
-			<!-- The navigational controls UI -->
-			<aside class="controls">
-				<a class="left" href="#">&#x25C4;</a>
-				<a class="right" href="#">&#x25BA;</a>
-				<a class="up" href="#">&#x25B2;</a>
-				<a class="down" href="#">&#x25BC;</a>
-			</aside>
+    this.view.p1 = this.params['p1'];
+    this.view.p2 = this.params['p2'];
 
-			<!-- Presentation progress bar -->
-			<div class="progress"><span></span></div>
-			
-		</div>
+    if (this.view.p1 == 'a')
+        return mvcapp.router.redirectToRoute('home anything', 
+            {'p1': 'pe1', 'p2': 'pe2', 'c': 'd'});
+};
+</code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>tartJS component kütüphaneleri</h2>
+                        <p>Bir MVC ve iki MVVM implementasyonu olmak üzere üç farklı yöntem sunar</p>
+                        <p>Hiçbiri <i>two-way data binding</i> gibi buzzword'ler kullanmaz</p>
+                        <br>
+                        <p><b>Temel Amaçları</b></p>
+                        <p>Performans</p>
+                        <p>Tekrar kullanılabilirlik</p>
+                        <p>Sürdürülebilirlik</p>
+                        <p>Modülarite</p>
+                        <p>Prototipleme için değil, üretim ortamları içindir.</p>
+                    </section>
+                    <section>
+                        <h2>tart.components</h2>
+                        <p>Büyük ölçekli / geniş sorumluluklu interaktif widget'lar için <br> klasik MVC şeması sunar</p>
+                        <p>Widget, Model, Controller, View ve Template sınıflarından oluşur</p>
+                        <p>Kod tekrarını azaltır, tekrar kullanılabilirliği artırır</p>
+                    </section>
+                    <section>
+                        <h2>tart.ui.Component</h2>
+                        <p>Daha küçük sorumluluklu component'ler için MVVM şeması sunar</p>
+                        <p>Daha hızlı development sağlar</p>
+                        <p>Imperative syntax sayesinde her DOM elemanı üzerinde azami kontrol sağlar</p>
+                    </section>
+                    <section>
+                        <h2>tart.ui.Element</h2>
+                        <p>tart.uı.Component'in bir varyasyonudur</p>
+                        <p>Çok daha hızlı development sağlar</p>
+                        <p>Performansı artırmak için sadece belirli DOM elemanları üzerinde kontrol imkanı sunar</p>
+                        <p>Mobil cihazlar gibi düşük performanslı ortamlarda idealdir</p>
+                        <p>Event delegation kullanır ama jQuery gibi eline yüzüne bulaştırmaz</p>
+                        <p>jQuery'den >5, Angular.js'ten >10 kat daha performanslı çalışır</p>
+                    </section>
+                </section>
+                <section>
+                    <h2>tartJS Boilerplate</h2>
+                    <p>tartJS ile nesne yönelimli JavaScript geliştirmeye başlayın.</p>
+                    <br>
+                    <p>github.com/tart/tartJS-Boilerplate</p>
+                    <br>
+                    <p><b>İçindekiler</b></p>
+                    <p><i>tartJS</i></p>
+                    <p><i>Temel klasör yapısı</i></p>
+                    <p><i>Build script'leri</i></p>
+                </section>
+                <section>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>                    
+                    <br/>
+                    <h1>?</h1>
+                </section>
+                <section>
+                    <h2>GitHub'da katkılarınızı bekliyoruz.</h2>
+                    <br/>
+                    <h1>Teşekkürler!</h1>
+                    <br/>
+                    <br/>
+                    <p>Armağan Amcalar, Tart New Media</p>
+                    <p>armagan.amcalar@tart.com.tr</p>
+                    <p>github.com/dashersw</p>
+                    <p>@aamcalar</p>
+                </section>
+            </div>
 
-		<script src="lib/js/head.min.js"></script>
+            <!-- The navigational controls UI -->
+            <aside class="controls">
+                <a class="left" href="#">&#x25C4;</a>
+                <a class="right" href="#">&#x25BA;</a>
+                <a class="up" href="#">&#x25B2;</a>
+                <a class="down" href="#">&#x25BC;</a>
+            </aside>
 
-		<script>
-			// Load reveal.js as well as a classList polyfill if needed
-			head.js( !document.body.classList ? 'lib/js/classList.js' : null )
-				.js( 'js/reveal.js', function() {
+            <!-- Presentation progress bar -->
+            <div class="progress"><span></span></div>
 
-				// Parse the query string into a key/value object
-				var query = {};
-				location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
-					query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
-				} );
+        </div>
 
-				// Fires when a slide with data-state=customevent is activated
-				Reveal.addEventListener( 'customevent', function() {
-					console.log( '"customevent" has fired' );
-				} );
+        <script src="lib/js/head.min.js"></script>
 
-				// Fires each time a new slide is activated
-				Reveal.addEventListener( 'slidechanged', function( event ) {
-					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-				} );
+        <script>
+            // Load reveal.js as well as a classList polyfill if needed
+            head.js( !document.body.classList ? 'lib/js/classList.js' : null )
+                .js( 'js/reveal.js', function() {
 
-				// Full list of configuration options available here:
-				// https://github.com/hakimel/reveal.js#configuration
-				Reveal.initialize({
-					controls: true,
-					progress: true,
-					history: true,
-					
-					theme: query.theme || 'default', // default/neon/beige
-					transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
-				});
+                // Parse the query string into a key/value object
+                var query = {};
+                location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+                    query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+                } );
 
-			} );
-			
-			// Load highlight.js for syntax highlighting of code samples
-			head.js( 'lib/js/highlight.js', function() { 
-				hljs.initHighlightingOnLoad(); 
-			} );
+                // Fires when a slide with data-state=customevent is activated
+                Reveal.addEventListener( 'customevent', function() {
+                    console.log( '"customevent" has fired' );
+                } );
 
-			// If we're runnning the notes server we need to include some additional JS
-			// TODO Is there a better way to determine if we're running the notes server?
-			if( window.location.host === 'localhost:1947' ) {
-				head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
-			}
-		</script>
-		
-	</body>
+                // Fires each time a new slide is activated
+                Reveal.addEventListener( 'slidechanged', function( event ) {
+                    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+                } );
+
+                // Full list of configuration options available here:
+                // https://github.com/hakimel/reveal.js#configuration
+                Reveal.initialize({
+                    controls: false,
+                    progress: false,
+                    history: true,
+                    theme: 'tart', // default/neon/beige
+                    transition: 'concave' // default/cube/page/concave/linear(2d)
+                });
+
+            } );
+
+            // Load highlight.js for syntax highlighting of code samples
+            head.js( 'lib/js/highlight.js', function() {
+                hljs.initHighlightingOnLoad();
+            } );
+
+            // If we're runnning the notes server we need to include some additional JS
+            // TODO Is there a better way to determine if we're running the notes server?
+            if( window.location.host === 'localhost:1947' ) {
+                head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
+            }
+        </script>
+
+    </body>
 </html>
