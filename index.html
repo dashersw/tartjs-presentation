@@ -12,19 +12,23 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Overlock:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/tart.css">
         <link rel="stylesheet" href="css/tartjs-presentation.css">
         <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 
-        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="lib/css/monokai.css">
     </head>
 
     <body>
+        <div class="bg veil"></div>
+        <div id="viewport" >
+    		<div id="world" >
+    		</div>
+    	</div>
 
         <div class="reveal">
 
@@ -33,26 +37,23 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-
-                <section class="tightPacked" data-state="pastelRed">
-                    <h1 class='cream'><span class='tart'>tart</span><span class='js'>JS</span></h1>
-                    <h2>ile</h2>
-                    <h2>Büyük Ölçekli Uygulama Geliştirme</h2>
+                <section data-state="first"></section>
+                <section class="tightPacked" data-state="intro">
+                    <br/>
+                    <br/>
+                    <h1><span>tart</span><span class='js'>JS</span></h1>
                     <br/>
                     <br/>
                     <br/>
                     <br/>
-                    <h3>Armağan Amcalar</h3>
-                    <h3>Chief Architect, Tart New Media</h3>
+                    <p>Armağan Amcalar</p>
+                    <p>Chief Architect, Tart New Media</p>
                     <script>
                         // Delicously hacky. Look away.
                         if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
                     </script>
                 </section>
-                <section>
-                    <img src='img/JSpict01.png'/>
-                </section>
-                <section class="trailOff" data-state="softBlue">
+                <section class="trailOff" data-state="two">
                     <h2>Ben Kimim?</h2>
                     <p>Tart Yeni Medya Mutfağı'nda baş yazılım mimarıyım.</p>
                     <p>tuttur.com, playstore.com gibi tart projelerinin genel yazılım mimarilerinden sorumluyum.</p>
@@ -69,45 +70,43 @@
                     </section>
                     <section>
                         <h1>tart</h1>
-                        <h1>&#9825</h1>
+                        <img src="img/heart.png" alt="" style="margin-top: 20px"/>
                         <h1>açık kaynak</h1>
                     </section>
                     <section>
                         <h1>tart</h1>
-                        <h1>&#9825</h1>
+                        <img src="img/heart.png" alt="" style="margin-top: 20px"/>
                         <h1>açık kaynak</h1>
                         <br/>
                         <h2>ve</h2> 
                         <h2>GitHub</h2>
                     </section>
                 </section>
-                <section>
-                    <h2>Bazı açık kaynaklı projelerimiz</h2>
+                <section data-state="pastelRed">
+                    <h2>Neler var?</h2>
                     <ul>
-                        <li><b>tartJS</b> - <i>Google Closure Library üzerine kurulu JS framework'ü</i></li>
-                        <li><b>tartMVC</b> - <i>Closure ile web mvc framework'ü</i></li>
-                        <li><b>tart components</b> - <i>Closure ile tekrar kullanılabilir komponentler</i></li>
-                        <li><b>geneJS</b> - <i>PlantUML için kod jeneratörü</i></li>
-                        <li><b>MoTop</b> - <i>MongoDB için "top" klonu</i></li>
-                        <li><b>qasmine</b> - <i>Jasmine testlerini komut satırından çalıştırmak için Qt uygulaması</i></li>
-                        <li><b>mira</b> - <i>Qt ile komut satırından çalışan "headless" tarayıcı</i></li>
-                        <li><b>DirectServer</b> - <i>Dağıtık kilit sunucusu</i></li>
+                        <li>tartJS</li>
+                        <li>tartMVC</li>
+                        <li>tart components</li>
+                        <li>geneJS</li>
+                        <li>MoTop</li>
+                        <li>qasmine</li>
+                        <li>mira</li>
+                        <li>DirectServer</li>
                     </ul>
                     <br/>
                     <br/>
-                    <a href="http://github.com/tart">github.com/tart/tartJS</a>
+                    <a href="http://github.com/tart">github.com/tart</a>
                 </section>
 
-                <section>
+                <section data-state="brown">
                     <section>
                         <h2>Google Closure Library ve Tools</h2>
-                        <p>Google'ın bütün ürünlerinde kullanılır</p>
-                        <p>En iyi JavaScript performansını sunar</p>
-                        <p>Modülerdir, nesne yönelimli programlamayı taban alır</p>
-                        <p>JavaScript kodunu derler, type safety sağlar</p>
-                        <p>Kod tarzını kontrol ve dikte eder</p>
-                        <p>Sayısız yararlı kütüphane, fonksiyon ve komponent içerir</p>
-                        <p><b>Constructor function ve prototype tabanlı programlama ile doğal JavaScript syntax'ını kullanır</b></p>
+                        <p>Ultra performans</p>
+                        <p>Modüler, OOP</p>
+                        <p>Kodu derler, toplar</p>
+                        <p>Tarz faşisti</p>
+                        <p>Constructor function ve prototype tabanlı</p>
                     </section>
                     <section>
                         <h2>Click event'ini dinlemek</h2>
@@ -188,22 +187,22 @@ $.Class('Monster',
 </code></pre>
                     </section>
                 </section>
-                <section>
+                <section data-state="pastelPurple">
                     <section>
                         <h2>tartMVC</h2>
                         <blockquote>MVC bir kod organizasyon şemasıdır, uygulama çatısı değildir.</blockquote>
-                        <p>playstore.com için geliştirildi, tüm dünyayla paylaşıldı</p>
-                        <p>GCC ile advanced mode'da derlenebilen, production'daki tek MVC çatısı</p>
+                        <br/>
+                        <br/>
                         <p>Hafif. gzip'li ve derlenmiş hali <b>10,5kb</b></p>
-                        <p>Closure'nin çoğu temel öğesini içerir</p>
+                        <p>Üstelik Closure'nin çoğu temel öğesini de içerir</p>
                     </section>
                     <section>
                         <h2>Neden tartMVC?</h2>
-                        <p>Hızlı, ufak, performanslı</p>
-                        <p>Ruby on Rails ya da Zend gibi klasik bir web mvc çatısı</p>
-                        <p>Sizi belli bir tarzda kod yazmaya zorlamaz</p>
-                        <p>Uydurma syntax'ları yoktur, JavaScript'in saf OOP syntax'ını kullanır</p>
-                        <p>Nesne yönelimli, type safe, bol dokümentasyonlu kod yazmanızı sağlar</p>
+                        <p>Web MVC</p>
+                        <p>Performanslı</p>
+                        <p>Özgürlükçü</p>
+                        <p>Doğal JavaScript</p>
+                        <p>Nesne yönelimli, type safe</p>
                     </section>
                     <section>
                         <h2>tartMVC neye benzer?</h2>
@@ -228,55 +227,49 @@ mvcapp.controllers.GamesController.indexAction = function() {
     this.view.p2 = this.params['p2'];
 
     if (this.view.p1 == 'a')
-        return mvcapp.router.redirectToRoute('home anything', 
+        return mvcapp.router.redirectToRoute('home anything',
             {'p1': 'pe1', 'p2': 'pe2', 'c': 'd'});
 };
 </code></pre>
                     </section>
                 </section>
 
-                <section>
+                <section data-state="pastelRed">
                     <section>
                         <h2>tartJS component kütüphaneleri</h2>
-                        <p>Bir MVC ve iki MVVM implementasyonu olmak üzere üç farklı yöntem sunar</p>
-                        <p>Hiçbiri <i>two-way data binding</i> gibi buzzword'ler kullanmaz</p>
-                        <br>
-                        <p><b>Temel Amaçları</b></p>
-                        <p>Performans</p>
-                        <p>Tekrar kullanılabilirlik</p>
-                        <p>Sürdürülebilirlik</p>
-                        <p>Modülarite</p>
-                        <p>Prototipleme için değil, üretim ortamları içindir.</p>
+                        <p>MVC, MVVM</p>
+                        <p>buzzword yok</p>
+                        <p>Tekrar kullanılabilir</p>
+                        <p>Sürdürülebilir</p>
+                        <p>Modüler</p>
+                        <p>Üretim ortamları için</p>
                     </section>
-                    <section data-state="grey">
+                    <section>
                         <h2>tart.components</h2>
-                        <p>Büyük ölçekli / geniş sorumluluklu interaktif widget'lar için <br> klasik MVC şeması sunar</p>
-                        <p>Widget, Model, Controller, View ve Template sınıflarından oluşur</p>
-                        <p>Kod tekrarını azaltır, tekrar kullanılabilirliği artırır</p>
+                        <p>Klasik MVC</p>
+                        <p>Widget, Model, Controller, View ve Template</p>
+                        <p>Çok modüler</p>
                     </section>
                     <section>
                         <h2>tart.ui.Component</h2>
-                        <p>Daha küçük sorumluluklu component'ler için MVVM şeması sunar</p>
-                        <p>Daha hızlı development sağlar</p>
-                        <p>Imperative syntax sayesinde her DOM elemanı üzerinde azami kontrol sağlar</p>
+                        <p>MVVM</p>
+                        <p>Imperative DOM yaratır. Azami DOM kontrolü</p>
                     </section>
                     <section>
                         <h2>tart.ui.DlgComponent</h2>
-                        <p>tart.uı.Component'in bir varyasyonudur</p>
-                        <p>Çok daha hızlı development sağlar</p>
-                        <p>Performansı artırmak için sadece belirli DOM elemanları üzerinde kontrol imkanı sunar</p>
-                        <p>Mobil cihazlar gibi düşük performanslı ortamlarda idealdir</p>
+                        <p>Template</p>
+                        <p>Mobil cihazlar gibi düşük performanslı ortamlarda ideal</p>
                         <p>Event delegation kullanır ama jQuery gibi eline yüzüne bulaştırmaz</p>
-                        <p>jQuery'den >5, Angular.js'ten >10 kat daha performanslı çalışır</p>
+                        <p>Performans canavarı</p>
                     </section>
                 </section>
                 <section data-state="pastelPurple">
                     <h2>tartJS Boilerplate</h2>
                     <p>tartJS ile nesne yönelimli JavaScript geliştirmeye başlayın.</p>
                     <br>
-                    <p>github.com/tart/Boilerplate</p>
+                    <a href="http://github.com/tart/boilerplate">github.com/tart/BoilerPlate</a>
                     <br>
-                    <p><b>İçindekiler</b></p>
+                    <br>
                     <p><i>tartJS</i></p>
                     <p><i>Temel klasör yapısı</i></p>
                     <p><i>Build script'leri</i></p>
@@ -289,7 +282,7 @@ mvcapp.controllers.GamesController.indexAction = function() {
                     <br/>
                     <h1>?</h1>
                 </section>
-                <section data-state="brightBlue">
+                <section data-state="pastelPurple">
                     <h2>GitHub'da katkılarınızı bekliyoruz.</h2>
                     <br/>
                     <h1>Teşekkürler!</h1>
@@ -299,6 +292,8 @@ mvcapp.controllers.GamesController.indexAction = function() {
                     <p>armagan.amcalar@tart.com.tr</p>
                     <p>github.com/dashersw</p>
                     <p>@aamcalar</p>
+                    <p class="mini">Bu sunum Reveal.js ile hazırlandı.<br/>
+                        Bulutlar için www.clicktorelease.com/code/css3dclouds adresinden yararlanıldı</p>
                 </section>
             </div>
 
@@ -348,6 +343,8 @@ mvcapp.controllers.GamesController.indexAction = function() {
                     transition: 'concave' // default/cube/page/concave/linear(2d)
                 });
 
+                head.js('js/clouds.js');
+
             } );
 
             // Load highlight.js for syntax highlighting of code samples
@@ -361,6 +358,5 @@ mvcapp.controllers.GamesController.indexAction = function() {
                 head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
             }
         </script>
-
     </body>
 </html>
