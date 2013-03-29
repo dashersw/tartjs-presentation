@@ -19,13 +19,13 @@ io.sockets.on('connection', function(socket) {
 		socket.broadcast.emit('slidedata', slideData);
 	});
 
-    socket.on('command', function() {
-        socket.broadcast.emit('key');
+    socket.on('command', function(data) {
+        socket.broadcast.emit('command', data);
     });
 });
 
 app.configure(function() {
-	[ 'css', 'js', 'plugin', 'lib' ].forEach(function(dir) {
+	[ 'css', 'js', 'plugin', 'lib', 'img' ].forEach(function(dir) {
 		app.use('/' + dir, staticDir(opts.baseDir + dir));
 	});
 });

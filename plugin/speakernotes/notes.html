@@ -4,10 +4,13 @@
 		<meta charset="utf-8">
 
 		<title>reveal.js - Slide Notes</title>
-
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1, user-scalable = no">
 		<style>
-			body {
+			body, html {
 				font-family: Helvetica;
+                height: 100%
 			}
 
 			#notes {
@@ -55,6 +58,35 @@
 				-webkit-transform-origin: 0 0;
 			}
 
+            .slides {
+                display: none
+            }
+
+            .buttons {
+                display: table;
+                height: 80%
+            }
+
+            .button {
+                display: table-cell;
+                height: 30%;
+                line-height: 100%;
+                text-align: center;
+                padding: 0 20px;
+                font-size: 48px;
+                font-weight: bold;
+                margin: 40px;
+                color: white;
+                background: -webkit-linear-gradient(top,rgba(255, 255, 255, 0.2) 0,rgba(0, 0, 0, 0.2) 100%);
+                border-radius: 10px;
+                box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.6),inset 0 0 0 1px rgba(0, 0, 0, 0.1),inset 0 -1px 0 0 rgba(0, 0, 0, 0.3);
+            }
+
+            .button.blue {
+                background-color: #099dd9
+            }
+
+
 			.slides {
 				position: relative;
 				margin-bottom: 10px;
@@ -75,7 +107,10 @@
 	</head>
 
 	<body>
-
+        <div class="buttons">
+            <div class='button blue' id="prevButton">Prev</div>
+            <div class='button blue' id="nextButton">Next</div>
+        </div>
 		<div id="wrap-current-slide" class="slides">
 			<iframe src="/?receiver" width="1280" height="1024" id="current-slide"></iframe>
 		</div>
@@ -89,6 +124,7 @@
 		<script src="/socket.io/socket.io.js"></script>
 
 		<script>
+
 		var socketId = '{{socketId}}';
 		var socket = io.connect(window.location.origin);
 		var notes = document.getElementById('notes');
@@ -103,6 +139,21 @@
 			currentSlide.contentWindow.Reveal.navigateTo(data.indexh, data.indexv);
 			nextSlide.contentWindow.Reveal.navigateTo(data.nextindexh, data.nextindexv);
 		});
+
+        //document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
+        //document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
+
+        var nextButton = document.getElementById('nextButton');
+        var prevButton = document.getElementById('prevButton');
+
+
+        nextButton.addEventListener('click', function() {
+            socket.emit('command', 'next');
+        });
+
+        prevButton.addEventListener('click', function() {
+            socket.emit('command', 'prev');
+        });
 		</script>
 
 	</body>

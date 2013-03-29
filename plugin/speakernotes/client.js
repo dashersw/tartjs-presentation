@@ -33,7 +33,14 @@
 		socket.emit('slidechanged', slideData);
 	} );
 
-    socket.on('key', function() {
-        Reveal.navigateNext();
+    socket.on('command', function(command) {
+        switch(command) {
+            case 'next':
+                Reveal.navigateNext();
+                break;
+            case 'prev':
+                Reveal.navigatePrev();
+        }
+
     })
 }());
